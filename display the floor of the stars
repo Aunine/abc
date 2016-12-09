@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void display(int a,int b){
+	while (a-->0)
+	putchar(b);
+} 
+
+int main(void){
+	int x,y;
+	printf("how many floors of squares do you want to show:");
+	scanf("%d",&x);
+	
+	for(y=1;y<=x;y++){
+	
+	display(x-y,' ');
+	display (y,'*');
+	putchar('\n');}
+	 
+return 0;
+
+}
