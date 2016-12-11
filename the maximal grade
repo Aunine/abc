@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define NUMBER 5
+
+int vx[NUMBER];
+int top(void){
+	extern vx[NUMBER];
+	int i;
+	int max=vx[0];
+	for(i=1;i<NUMBER;i++)
+	{if(vx[i]>max)
+	max=vx[i]; 
+	}
+	return (max);
+} 
+
+int main(void){
+	extern vx[];
+	int a;
+	printf("please input the %d students' grade:\n",NUMBER);
+	for(a=0;a<NUMBER;a++)
+	{printf("%d:",a+1);
+	scanf("%d",&vx[a]);
+	}
+	printf("the max grade is:%d",top());
+	return 0;	
+}
